@@ -18,7 +18,6 @@ public:
         if(head -> next == NULL){
             return NULL;
         }
-
         int len = 0;
         ListNode* curr = head;
 
