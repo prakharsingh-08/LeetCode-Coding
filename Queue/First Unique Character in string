@@ -1,0 +1,34 @@
+Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
+Example 1:
+
+Input: s = "leetcode"
+Output: 0
+Example 2:
+
+Input: s = "loveleetcode"
+Output: 2
+Explanation of Examples:
+Example 1: "leetcode"
+
+Character frequencies: {'l': 1, 'e': 3, 't': 1, 'c': 1, 'o': 1, 'd': 1}
+The first character with a frequency of 1 is 'l' at index 0. So, the output is 0.
+
+
+*********************************************************Code*********************************************************************
+class Solution{
+public:
+    int firstUnique(String s) {
+        unordered_map<char, int> ump(26);
+
+        for(int i = 0;i < s.size(); i++){
+            ump[s[i]]++;
+        }
+        for(int i = 0; i<s.size(); i++) {
+            if(ump[s[i]] == 1)
+            return i;
+        }
+
+        return -1;
+        
+    }
+};
