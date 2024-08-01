@@ -1,0 +1,21 @@
+Example 1:
+
+Input: details = ["7868190130M7522","5303914400F9211","9273338290F4010"]
+Output: 2
+class Solution {
+public:
+    int countSeniors(vector<string>& details) {
+        int seniorCount = 0;
+        for (const string& info : details) {
+            char tens = info[11];
+            char ones = info[12];
+            if (tens > '6' || (tens == '6' && ones > '0')) {
+                seniorCount++;
+            }
+        }
+        return seniorCount;
+    }
+};
+Explanation: The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.
+
+
