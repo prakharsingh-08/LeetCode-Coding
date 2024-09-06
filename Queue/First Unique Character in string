@@ -15,7 +15,8 @@ The first character with a frequency of 1 is 'l' at index 0. So, the output is 0
 
 
 *********************************************************Code*********************************************************************
-class Solution{
+class Solution
+{
 public:
     int firstUnique(String s) {
         unordered_map<char, int> ump(26);
