@@ -1,0 +1,19 @@
+//This C++ code is designed to solve the problem of removing duplicates from a sorted array in such a way that each element can appear at most twice. 
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+    
+        int i = 0;
+        int ele = nums[0];
+        for(auto ele : nums)
+        {
+            if(i == 0 || i == 1|| nums[i-2] != ele)
+            {
+                nums[i] = ele; //If the condition is met, the current element ele is placed at position i, and i is incremented.
+                i++;
+            }
+        }
+
+        return i;
+    }
+};
