@@ -1,1 +1,33 @@
+Example 1:
 
+Input: s = "())"
+Output: 1
+Example 2:
+
+Input: s = "((("
+Output: 3
+*************************************
+
+class Solution {
+public:
+    int minAddToMakeValid(string s) {
+
+        stack<char> S;
+        int c = 0;
+        for(char i : s)
+        {
+            if(i == '(')
+                S.push(i); // S is referring to (
+
+            else{
+                if(S.empty())
+                    c++;   // c is referring to )
+                else
+                    S.pop();
+            }
+        }
+
+        return c + S.size();//c is returning the count of ) and s is returning the count of (
+        
+    }
+};
