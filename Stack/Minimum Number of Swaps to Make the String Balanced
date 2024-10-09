@@ -1,1 +1,29 @@
+Input: s = "][]["
+Output: 1
+Explanation: You can make the string balanced by swapping index 0 with index 3.
+The resulting string is "[[]]".
 
+
+*****************************************************************************************
+class Solution {
+public:
+    int minSwaps(string s) {
+
+       stack<char> st;
+
+       for(char &ch : s)
+       {
+        if(ch == '[')
+        {
+            st.push(ch);
+        }
+        else if(!st.empty())
+        {
+            st.pop();
+        }
+       }
+
+       return (st.size() + 1)/2;
+        
+    }
+};
