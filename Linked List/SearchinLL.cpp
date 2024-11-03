@@ -7,6 +7,7 @@ struct Node
     Node(int x) {  data = x;  next = NULL; }
 }; */
 
+
 class Solution {
   public:
     // Function to count nodes of a linked list.
