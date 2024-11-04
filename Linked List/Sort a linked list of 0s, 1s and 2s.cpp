@@ -30,13 +30,11 @@ class Solution
                if(temp->data==1){
                 ones++;
             }
-
                if(temp->data==2){
                 twos++;
             }
             
             temp=temp->next;
-            
         }
         
         temp=head;
@@ -44,10 +42,8 @@ class Solution
         while(zeros!=0){
             
             temp->data=0;
-            
             temp=temp->next;
             zeros--;
-          
         }
         
           while(ones!=0){
@@ -63,9 +59,7 @@ class Solution
             temp=temp->next;
             twos--;
         }
-        
         return head;
-        // Add code here
-        
+
     }
 };
