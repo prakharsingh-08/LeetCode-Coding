@@ -3,3 +3,18 @@ Output: 1
 Explanation: The product of all values in the array is 144, and signFunc(144) = 1
 
 ***********************************************************************************************************
+class Solution {
+public:
+    int arraySign(vector<int>& nums) {
+        int sign = 1;
+        for (int num : nums) {
+            if (num == 0) {
+                return 0;  // If there's a zero, the product is zero
+            }
+            if (num < 0) {
+                sign = -sign;  // Flip the sign for each negative number
+            }
+        }
+        return sign;
+    }
+};
