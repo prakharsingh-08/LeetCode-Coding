@@ -1,5 +1,3 @@
-
-
 // Shorted Approach
 class Solution {
 public:
