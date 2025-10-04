@@ -1,3 +1,4 @@
+
 /*Example 1:
 Input: array = [2,3,6,7], target = 7
 
