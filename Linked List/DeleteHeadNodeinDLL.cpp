@@ -2,6 +2,7 @@
 
 
 
+
 void print(Node* head) {
     while (head != nullptr) {
         // Print the data in the current node
