@@ -11,6 +11,7 @@ Node* deleteHead(Node* head) {
     if (head == nullptr || head->next == nullptr) {
       // Return NULL if the list is empty or contains only one element
         return nullptr; 
+        
     }
 
    // Store the current head as 'prev'
