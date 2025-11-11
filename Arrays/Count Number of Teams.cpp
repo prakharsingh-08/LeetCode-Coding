@@ -4,8 +4,7 @@
 
 class Solution {
 public:
-    int numTeams(vector<int>& rating) {
-        int n=rating.size();
+    int numTeams(vector<int>& rating)      int n=rating.size();
         int k= count(rating);                           //            for < < case
         reverse(rating.begin(),rating.end());
         k+=(count(rating));                                   //             for > > case
